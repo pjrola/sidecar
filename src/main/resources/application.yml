@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:5679}
+
+spring:
+  application:
+      name: elastic-service
+
+sidecar:
+  port: 3001
+  home-page-uri: http://localhost:${server.port}/
+  health-uri: http://localhost:${server.port}/delegating-status
